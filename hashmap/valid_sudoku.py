@@ -18,31 +18,26 @@ def isValidSudoku(board):
     col_map = defaultdict(list)
     box_map = defaultdict(list)
 
-    for row in range(len(board)):
-        for col in range(len(board[0])):
-            num = board[row][col]
+    for i in range(len(board[0])):
+        for j in range(len(board)):
+            num = board[i][j]
             if num != '.':
-                if num in row_map[row]:
-                    print(row, col, '------', num)
+                if num in row_map[i]:
                     return False
                 else:
-                    row_map[row].append(num)
+                    row_map[i].append(num)
 
-                if num in col_map[col]:
-                    print(row, col, '------', num)
+                if num in col_map[j]:
                     return False
                 else:
-                    col_map[col].append(num)
+                    col_map[j].append(num)
 
-                box_index = (row / 3) * 3 + col / 3
+                box_index = (i // 3) * 3 + j // 3
                 if num in box_map[box_index]:
-                    print(row, col, '------', num)
                     return False
                 else:
                     box_map[box_index].append(num)
 
-    print(col_map)
-    print(row_map)
     return True
 
 
