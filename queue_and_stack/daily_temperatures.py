@@ -30,8 +30,27 @@ T = [89, 62, 70, 58, 47, 47, 46, 76, 100, 70]
 # print(dailyTemperatures(T))
 
 
-def dailyTemperatures(T):
-    stack = []
+# def dailyTemperatures(T):
+#     """Use pointers, time limit exceeded"""
+#     if len(T) == 0:
+#         return [0]
+
+#     result, head, tail = [], 0, 1
+
+#     while head <= len(T) - 1:
+#         if tail <= len(T) - 1 and T[head] >= T[tail]:
+#             tail += 1
+#         else:
+#             if tail > len(T) - 1:
+#                 result.append(0)
+#             else:
+#                 result.append(tail - head)
+#             head += 1
+#             tail = head + 1
+
+#         print(head, tail, result)
+
+#     return result
 
 
-print(dailyTemperatures(T))
+# print(dailyTemperatures(T))
