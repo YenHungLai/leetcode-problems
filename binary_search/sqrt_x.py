@@ -1,5 +1,4 @@
 def mySqrt(x):
-<<<<<<< Updated upstream
     if x < 2:
         return x
 
@@ -17,9 +16,6 @@ def mySqrt(x):
             return pivot
 
     return right
-=======
-    pass
->>>>>>> Stashed changes
 
 
 print(mySqrt(8))
